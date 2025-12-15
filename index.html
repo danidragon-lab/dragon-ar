@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Dragón en Realidad Aumentada</title>
+  <title>Dragón AR</title>
 
   <script type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
@@ -14,18 +14,16 @@
       background: #ffffff;
     }
 
-    button {
+    model-viewer::part(ar-button) {
       position: absolute;
-      bottom: 20px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
-      padding: 12px 20px;
-      font-size: 16px;
-      background: #000000;
+      background: #000;
       color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-size: 16px;
     }
   </style>
 </head>
@@ -33,73 +31,12 @@
 <body>
 
   <model-viewer
-    id="viewer"
     src="dragon.glb"
     ar
-    ar-modes="scene-viewer webxr quick-look"
+    ar-modes="scene-viewer"
     ar-placement="floor"
     camera-controls
-    auto-rotate
     style="width: 100%; height: 100vh;">
-    
-    <!-- BOTÓN AR FORZADO -->
-    <button slot="ar-button">
-      Ver en mi espacio
-    </button>
-
-  </model-viewer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Dragón en Realidad Aumentada</title>
-
-  <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      background: #ffffff;
-    }
-
-    button {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 12px 20px;
-      font-size: 16px;
-      background: #000000;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-<body>
-
-  <model-viewer
-    id="viewer"
-    src="dragon.glb"
-    ar
-    ar-modes="scene-viewer webxr quick-look"
-    ar-placement="floor"
-    camera-controls
-    auto-rotate
-    style="width: 100%; height: 100vh;">
-    
-    <!-- BOTÓN AR FORZADO -->
-    <button slot="ar-button">
-      Ver en mi espacio
-    </button>
-
   </model-viewer>
 
 </body>
