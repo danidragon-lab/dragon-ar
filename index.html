@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Dragón AR</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dragón AR</title>
 
-  <script type="module"
-    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-  </script>
+    <!-- Model Viewer oficial -->
+    <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
 
-  <style>
-    body {
-      margin: 0;
-      background: #ffffff;
-    }
+    <style>
+      body {
+        margin: 0;
+        background: #ffffff;
+      }
 
-    model-viewer::part(ar-button) {
-      position: absolute;
-      bottom: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #000;
-      color: white;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-size: 16px;
-    }
-  </style>
-</head>
+      model-viewer {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
 
-  <model-viewer
-    src="dragon.glb"
-    ar
-    ar-modes="scene-viewer"
-    ar-placement="floor"
-    camera-controls
-    style="width: 100%; height: 100vh;">
-  </model-viewer>
+    <model-viewer
+      src="dragon.glb"
+      ar
+      ar-modes="scene-viewer quick-look webxr"
+      camera-controls
+      auto-rotate
+      shadow-intensity="1"
+      exposure="1"
+      alt="Cabeza de dragón en realidad aumentada">
 
-</body>
+    </model-viewer>
+
+  </body>
 </html>
